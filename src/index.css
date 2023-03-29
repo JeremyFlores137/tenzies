@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+:root {
+    --primary-50: #cdb4db;
+    --primary-100: #ffc8dd;
+    --primary-200: #ffafcc;
+    --primary-300: #bde0fe;
+    --primary-400: #a2d2ff;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    --grey-50: #f0f4f8;
+    --grey-100: #d9e2ec;
+    --grey-200: #bcccdc;
+    --grey-300: #9fb3c8;
+    --grey-400: #829ab1;
+    --grey-500: #627d98;
+    --grey-600: #486581;
+    --grey-700: #334e68;
+    --grey-800: #243b53;
+    --grey-900: #102a43;
+
+     /* fonts  */
+    --headingFont: 'Lounge', Sans-Serif;
+    --bodyFont: 'Inter', Sans-Serif;
+    --small-text: 0.875rem;
+    --extra-small-text: 0.7em;
+
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-900);
+    --borderRadius: 0.25rem;
+    --letterSpacing: 1px;
+    --transition: 0.3s ease-in-out all;
+
+}
+*::after, *::before, *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #0B2434;
+    font-family: var(--bodyFont);
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--textColor);
+    margin: 10px;
+}
+main{
+    background: var(--backgroundColor);
+    text-align: center;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: auto;
+    padding: 0.6em;
+}
+.title-header{
+    margin: 0;
+    font-family: var(--headingFont);
+    font-size: 3em;
+}
+.content-main{
+    font-family: var(--bodyFont);
+    color: #1d3557;
+    margin-bottom: 1.5em;
+}
+.tenzies-container{
+    padding: 0.2em;
+}
+.dice{
+    display: grid;
+    grid-template: 5em 5em/repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    color: #fcbf49;
+}
+.dice-container{
+    max-width: 400px;
+    margin: auto;
+}
+.roll-btn{
+    width: 7em;
+    height: 2em;
+    background-color: #5035FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 0.2em;
+}
+.roll-btn:hover{
+    background-color: #230fa0;
+}
+.die{
+    box-shadow: 1px 5px 5px rgba(113, 113, 113, 0.15);
+    cursor: pointer;
+}
+.time{
+    font-family: 'Time', sans-serif;
+}
+.timer-container{
+    text-align: center;
+    border-bottom:1px solid #0B2434;
+    margin-bottom: 1em;
+    background-color: #84a98c;
+    border-radius: 15px;
+    box-shadow: 1px 5px 5px rgba(113, 113, 113, 0.15);
+}
+.clock{
+    width: 3em;
+}
+.score-box{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@font-face {
+    src: url("./assets/LoungeBait-JpVa.ttf");
+    font-family: Lounge;
+}
+@font-face {
+    src: url("./assets/digital-7.ttf");
+    font-family: Time;
 }
